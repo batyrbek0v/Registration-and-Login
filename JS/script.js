@@ -1,3 +1,3 @@
 window.addEventListener('load' , () => {
-    window.open('./register.js', '_self')
+    window.open('./register.html', '_self')
 })
