@@ -18,9 +18,7 @@ function getRegister() {
     })
     .then(res => res.json())
     .then(res => {
-        localStorage.setItem('accessToken', res.accessToken)
-        localStorage.setItem('refreshToken', res.refreshToken)
-        localStorage.setItem('userID', res.user.id)
+        console.log(res);
     })
 }
 
