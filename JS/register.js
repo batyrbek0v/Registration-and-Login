@@ -20,7 +20,7 @@ function getRegister() {
     .then(res => {
         localStorage.setItem('accessToken', res.accessToken)
         localStorage.setItem('refreshToken', res.refreshToken)
-        localStorage.setItem('userID', res.user.id)
+        // localStorage.setItem('userID', res.user.id)
         console.log(res);
     })
 }
@@ -29,4 +29,5 @@ function getRegister() {
 $regist_btn.addEventListener('click', e => {
     e.preventDefault()
     getRegister()
+    
 })
