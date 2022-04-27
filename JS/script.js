@@ -5,6 +5,7 @@ const $todo_date = document.querySelector('.todo_date')
 const $add_todo = document.querySelector('.add_todo')
 const $container = document.querySelector('.container')
 const $wrapper = document.querySelector('.wrapper')
+const $logout = document.querySelector('.logout')
 
 // DOM-ELEMENTS-END
 
@@ -181,22 +182,22 @@ $add_todo.addEventListener('click', e => {
   createTodos($todo_title.value, $todo_content.value, $todo_date.value)
 })
 
-// $logout.addEventListener('click', e => {
-//   e.preventDefault()
-//   $logout.disabled = true
+$logout.addEventListener('click', e => {
+  e.preventDefault()
+  $logout.disabled = true
 
-//   const refreshToken = localStorage.getItem('refreshToken')
+  const refreshToken = localStorage.getItem('refreshToken')
 
-//   requests.post(`${baseUrl}/logout`, '', refreshToken)
-//   .then(() => {
-//   localStorage.clear()
-//   window.open('../auth.html', '_self')
-//   })
-//   .finally(() => {
-//     $logout.disabled = false
-//   })
+  requests.post(`${baseUrl}/logout`, '', refreshToken)
+  .then(() => {
+  localStorage.clear()
+  window.open('../auth.html', '_self')
+  })
+  .finally(() => {
+    $logout.disabled = false
+  })
 
-// })
+})
 
 //  refreshToken
 
